@@ -1,11 +1,21 @@
 {
-  "name": "my-app",
+  "name": "movie-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animate.css": "^3.7.0",
+    "antd": "^3.10.0",
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
     "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.4"
+    "react-modal": "^3.6.1",
+    "react-rating": "^1.4.0",
+    "react-responsive": "^5.0.0",
+    "react-scripts": "2.0.4",
+    "react-stars": "^2.2.5",
+    "semantic-ui-react": "^0.82.5"
   },
   "scripts": {
     "start": "react-scripts start",

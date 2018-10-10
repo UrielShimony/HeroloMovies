@@ -1,0 +1,88 @@
+.card {
+    display: flex;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 375px;
+    height: 210px;
+    flex-direction: row;
+}
+.card:hover{
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    box-shadow: 5px 5px 5px #C7C7C7;
+}
+
+.imageContainer {
+    display: block;
+    width: 150px;
+}
+
+.cardDataContainer{
+    display: flex;
+    flex: 5;
+    flex-direction: column;
+}
+.cardData {
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    border-bottom: solid #6A469D 1px;
+}
+.cardEditField{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+}
+.movieTitle{
+    margin-top: 0;
+    font-size: larger;
+    font-weight: bold;
+}
+.idField{
+    font-size: smaller;
+    color:gainsboro;
+}
+.editButton{
+    border-color: white;
+    border-radius: 5px;
+    color: #6A469D;
+    background-color:  rgba(0, 0, 0, 0.02);
+}
+.editButton:hover{
+    border-radius: 5px;
+    border-color: white;
+    background-color: lightslategray;
+    opacity: 0.8;
+}
+
+.deleteIcon{
+    width: 10px;
+    align-self: flex-end;
+    margin-top: -10px;
+}
+.deleteIcon:hover{
+    color: #E33C2E;
+}
+.titleField{
+    padding: 0;
+    margin: 0px 0px 0px 0px;
+}
+.ratingField{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.reactStars{
+    display: inline-block;
+
+}
+.field{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.boldField{
+    font-weight: bold;
+}

@@ -1,0 +1,21 @@
+.MovieList{
+    display: flex;
+    flex-direction: column;
+
+}
+.MovieList > *{
+    margin: 20px;
+}
+.ListsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.MobileSize>.MovieList{
+    justify-content: center;
+    align-items: center;
+}
+.addButton{
+    font-size: 100px;
+    color: greenyellow;
+}
