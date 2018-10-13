@@ -22,6 +22,7 @@ const MOVIE_LIST_PARAMS = {
 class APILayer {
     constructor() {
         this.genresList = {};
+        this.moviesList = {};
         MockServer.get(GENRES_URL, GENRES_PARAMS)
             .then((genresList) => {
                 this.genresList = genresList.data.genres;
@@ -30,8 +31,9 @@ class APILayer {
 
     getMovies() {
         return MockServer.get(MOVIES_URL, MOVIE_LIST_PARAMS)
-            .then((response)=>{
-            return response.data.results;
+            .then((response) => {
+                this.moviesList = response.data.results;
+                return response.data.results;
             })
     }
 
@@ -44,6 +46,25 @@ class APILayer {
             }
             return genreName;
         }
+    }
+
+    getGenreList() {
+        return this.genresList;
+    }
+
+    isTitleExist(title, id) {
+        return _.findIndex(this.moviesList, (movie) => {
+            return movie.title === title && !(movie.id === id)
+        }) === -1
+
+    }
+
+    removMovie(movieToRemove) {
+        const movieIndex = _.findIndex(this.moviesList, (movie) => {
+            return movie.id === movieToRemove.id
+        });
+        if (movieIndex > -1)
+            this.moviesList.splice(movieIndex, 1);
     }
 }
 
