@@ -5,6 +5,7 @@
     width: 375px;
     height: 210px;
     flex-direction: row;
+    transition: 0.3s cubic-bezier(0.6, -0.28, 0.74, 0.05) all;
 }
 .card:hover{
     -webkit-transform: scale(1.03);
@@ -12,10 +13,26 @@
     transform: scale(1.03);
     box-shadow: 5px 5px 5px #C7C7C7;
 }
+.addIcon{
+    position: fixed;
+    bottom:15px ;
+    right: 15px;
+    font-size: 70px;
+    color: #6A469D;
+    transition: 0.3s cubic-bezier(0.6, -0.28, 0.74, 0.05) all;
+}
+.addIcon:hover{
+     font-size: 75px;
+     color: limegreen;
+ }
 
 .imageContainer {
     display: block;
     width: 150px;
+}
+
+.imageContainer img {
+    max-height:100%;
 }
 
 .cardDataContainer{
@@ -28,6 +45,7 @@
     flex: 4;
     flex-direction: column;
     border-bottom: solid #6A469D 1px;
+    padding: 0 10px;
 }
 .cardEditField{
     display: flex;
@@ -58,6 +76,7 @@
 }
 
 .deleteIcon{
+    font-size: 22px;
     width: 10px;
     align-self: flex-end;
     margin-top: -10px;
@@ -81,8 +100,11 @@
 .field{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .boldField{
     font-weight: bold;
+}
+.genreDetails{
+    word-break: break-word;
 }
